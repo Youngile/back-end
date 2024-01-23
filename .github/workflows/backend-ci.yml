@@ -27,7 +27,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.ap-northeast-2.amazonaws.com
         IMAGE_NAME: my-ecr-repo
-        TAG: front-end
+        TAG: back-end
       run: |
         docker build -t $ECR_REGISTRY/$IMAGE_NAME:$TAG .
         docker push $ECR_REGISTRY/$IMAGE_NAME:$TAG
