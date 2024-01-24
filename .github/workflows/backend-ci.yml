@@ -20,6 +20,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-northeast-2  # 사용할 AWS 리전으로 변경
 
+    - name: Setup Node.js
+      uses: actions/setup-node@v4  # 원하는 버전으로 변경 가능
+      with:
+        node-version: '16'  # Node.js 16 버전으로 업데이트
+
     - name: Login to Amazon ECR
       uses: aws-actions/amazon-ecr-login@v1
 
