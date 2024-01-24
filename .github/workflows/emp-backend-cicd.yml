@@ -20,7 +20,7 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: backend-emp # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: my-ecr-repo # set this to your Amazon ECR repository name
   KUBE_NAMESPACE: backend
 
 jobs:
@@ -107,6 +107,6 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
           git commit -am "Update image tag"
-          git push -u origin backend-emp
+          git push -u origin main
 
 
